@@ -1,0 +1,11 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Sat Nov 11 17:11:02 2017
+# Process ID: 3028
+# Current directory: /home/tianzhao/quartus_16_designs/spatial-lang/gen/InOutArg/verilog-zynq
+# Command line: vivado -mode batch -source bdproject.tcl -tclargs 100
+# Log file: /home/tianzhao/quartus_16_designs/spatial-lang/gen/InOutArg/verilog-zynq/vivado.log
+# Journal file: /home/tianzhao/quartus_16_designs/spatial-lang/gen/InOutArg/verilog-zynq/vivado.jou
+#-----------------------------------------------------------
