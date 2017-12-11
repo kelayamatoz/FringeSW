@@ -11,6 +11,8 @@
 #define FRINGE_SCALAR_BASEADDR  0x40000000
 #define MEM_SIZE                0x20000000
 #define MAP_LEN                 0x10000
+#define FREEZE_BRIDGE_OFFSET    0x00000800
+
 
 typedef unsigned long u32;
 
