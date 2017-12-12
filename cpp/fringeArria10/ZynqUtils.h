@@ -10,7 +10,6 @@
 
 typedef unsigned long u32;
 
-
 // Bit masks and positions - Command register
 #define MREAD(val, mask) (((val) & (mask)) >> __builtin_ctz(mask))
 #define MWRITE(val, mask) (((val) << __builtin_ctz(mask)) & (mask))

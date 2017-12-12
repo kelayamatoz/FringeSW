@@ -1,30 +1,28 @@
-#ifndef __FRINGE_CONTEXT_ZYNQ_H__
-#define __FRINGE_CONTEXT_ZYNQ_H__
+#ifndef __FRINGE_CONTEXT_ARRIA10_H__
+#define __FRINGE_CONTEXT_ARRIA10_H__
 
-#include "FringeContextBase.h"
-#include "ZynqAddressMap.h"
-#include "ZynqUtils.h"
+
 #include <cstring>
 #include <stdlib.h>
 #include <fcntl.h>
-#include <sys/mman.h>
 #include <errno.h>
 #include <unistd.h>
+#include <sys/mman.h>
+#include "FringeContextBase.h"
+#include "ZynqAddressMap.h"
+#include "ZynqUtils.h"
 #include "generated_debugRegs.h"
+
 // Some key code snippets have been borrowed from the following source:
 // https://shanetully.com/2014/12/translating-virtual-addresses-to-physcial-addresses-in-user-space
 
 // The page frame shifted left by PAGE_SHIFT will give us the physcial address of the frame
-// // Note that this number is architecture dependent. For me on x86_64 with 4096 page sizes,
-// // it is defined as 12. If you're running something different, check the kernel source
-// // for what it is defined as.
+// Note that this number is architecture dependent. For me on x86_64 with 4096 page sizes,
+// it is defined as 12. If you're running something different, check the kernel source
+// for what it is defined as.
 #define PAGE_SHIFT 12
 #define PAGEMAP_LENGTH 8
 #define USE_PHYS_ADDR
-
-/**
- * Zynq Fringe Context
- */
 
 extern "C" {
   void __clear_cache(char* beg, char* end);
@@ -34,7 +32,7 @@ class FringeContextZynq : public FringeContextBase<void> {
 
   const uint32_t burstSizeBytes = 64;
   int fd = 0;
-  u32 fringeScalarBase = 0;
+  u32* fringeScalarBase = 0;
   u32 fringeMemBase    = 0;
   u32 fpgaMallocPtr    = 0;
   u32 fpgaFreeMemSize  = MEM_SIZE;
@@ -110,18 +108,18 @@ public:
     }
 
     // Initialize pointers to fringeScalarBase
-    void *ptr;
-    ptr = mmap(NULL, MAP_LEN, PROT_READ|PROT_WRITE, MAP_SHARED, fd, FRINGE_SCALAR_BASEADDR);
-    fringeScalarBase = (u32) ptr;
+    void* ptr = (void *)mmap(NULL, MAP_LEN, PROT_READ|PROT_WRITE, MAP_SHARED, fd, FRINGE_SCALAR_BASEADDR);
+    fringeScalarBase = (u32)(ptr + FREEZE_BRIDGE_OFFSET);
 
     // Initialize pointer to fringeMemBase
-    ptr = mmap(NULL, MEM_SIZE, PROT_READ|PROT_WRITE, MAP_SHARED, fd, FRINGE_MEM_BASEADDR);
-    fringeMemBase = (u32) ptr;
-    fpgaMallocPtr = fringeMemBase;
+    // TODO: need to figure out the avalon protocol
+    // ptr = mmap(NULL, MEM_SIZE, PROT_READ|PROT_WRITE, MAP_SHARED, fd, FRINGE_MEM_BASEADDR);
+    // fringeMemBase = (u32) ptr;
+    // fpgaMallocPtr = fringeMemBase;
   }
 
   virtual void load() {
-    std::string cmd = "prog_fpga " + bitfile;
+    std::string cmd = "cd /boot && dtbt -r pr_region_alt.dtbo -p /boot && dtbt -a pr_region_alt.dtbo -p /boot";
     system(cmd.c_str());
   }
 
@@ -298,24 +296,21 @@ public:
   virtual void setNumArgIOs(uint32_t number) {
   }
 
-  virtual void setArg(uint32_t arg, uint64_t data, bool isIO) {
+  virtual void setArg(uint32_t arg, uint32_t data, bool isIO) {
     writeReg(arg+2, data);
   }
 
-  virtual uint64_t getArg(uint32_t arg, bool isIO) {
+  virtual uint32_t getArg(uint32_t arg, bool isIO) {
     numArgOuts++;
     return readReg(numArgIns+2+arg);
-
   }
 
-  virtual void writeReg(uint32_t reg, uint64_t data) {
-    sleep(0.2); // Prevents zcu crash for some unknown reason
-    Xil_Out32(fringeScalarBase+reg*sizeof(u32), data);
+  virtual void writeReg(uint32_t reg, uint32_t data) {
+    Xil_Out32(fringeScalarBase+reg, data);
   }
 
-  virtual uint64_t readReg(uint32_t reg) {
-    uint32_t value = Xil_In32(fringeScalarBase+reg*sizeof(u32));
-//    fprintf(stderr, "[readReg] Reading register %d, value = %lx\n", reg, value);
+  virtual uint32_t readReg(uint32_t reg) {
+    uint32_t value = Xil_In32(fringeScalarBase+reg);
     return value;
   }
 

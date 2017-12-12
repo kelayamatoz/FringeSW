@@ -36,7 +36,6 @@ void htonlBuf(uint32_t *buf, u32 numWords)
   }
 }
 
-
 void ntohlBuf(uint32_t *buf, u32 numWords)
 {
   ASSERT(buf, "Buf passed to ntohl_buf is NULL!\n");
