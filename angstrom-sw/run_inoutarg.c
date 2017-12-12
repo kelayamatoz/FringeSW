@@ -35,7 +35,7 @@ int main(int argc, char** argv)
   printf("0x%x\n", *sysIDPtr);
 
   // the argin/out registers are mapped at 0x0000 to 0x01ff
-  int *fringeAddrPtr = (int *)(virtualBase + FREEZE_BRIDGE_OFFSET);
+  volatile int *fringeAddrPtr = (volatile int *)(virtualBase + FREEZE_BRIDGE_OFFSET);
   printf("%d, %s\n", argc, argv[1]);
   *(fringeAddrPtr + 2) = argc > 1 ? atoi(argv[1]) : 100;
   *(fringeAddrPtr) = 1;

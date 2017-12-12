@@ -7,7 +7,7 @@ u32 Xil_In32(u32 Addr)
 	return *(volatile u32 *) Addr;
 }
 
-void Xil_Out32(u32 OutAddress, u32 Value)
+void Xil_Out32(u32* OutAddress, u32 Value)
 {
 	*(volatile u32 *) OutAddress = Value;
 }

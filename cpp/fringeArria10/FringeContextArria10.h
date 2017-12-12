@@ -29,10 +29,9 @@ extern "C" {
 }
 
 class FringeContextArria10 : public FringeContextBase<void> {
-
   const uint32_t burstSizeBytes = 64;
   int fd = 0;
-  u32* fringeScalarBase = 0;
+  volatile uint32_t* fringeScalarBase = 0;
   u32 fringeMemBase    = 0;
   u32 fpgaMallocPtr    = 0;
   u32 fpgaFreeMemSize  = MEM_SIZE;
@@ -109,7 +108,7 @@ public:
 
     // Initialize pointers to fringeScalarBase
     void* ptr = (void *)mmap(NULL, MAP_LEN, PROT_READ|PROT_WRITE, MAP_SHARED, fd, FRINGE_SCALAR_BASEADDR);
-    fringeScalarBase = (u32 *)((char *)ptr + FREEZE_BRIDGE_OFFSET);
+    fringeScalarBase = (volatile uint32_t *)((char *)ptr + FREEZE_BRIDGE_OFFSET);
 
     // Initialize pointer to fringeMemBase
     // TODO: need to figure out the avalon protocol
@@ -306,11 +305,12 @@ public:
   }
 
   virtual void writeReg(uint32_t reg, uint32_t data) {
-    Xil_Out32(fringeScalarBase+reg, data);
+    *(fringeScalarBase + reg) = data;  
   }
 
   virtual uint32_t readReg(uint32_t reg) {
-    uint32_t value = Xil_In32(fringeScalarBase+reg);
+    // uint32_t value = Xil_In32(fringeScalarBase+reg);
+    uint32_t value = *(fringeScalarBase + reg);
     return value;
   }
 

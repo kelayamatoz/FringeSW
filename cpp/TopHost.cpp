@@ -2,8 +2,8 @@
 #include <sys/time.h>
 #include <iostream>
 #include <fstream>
-#include <string> 
-#include <sstream> 
+#include <string>
+#include <sstream>
 #include <stdarg.h>
 #include <signal.h>
 #include <sys/wait.h>
@@ -22,7 +22,7 @@
 #include <vector>
 using std::vector;
 
-#ifndef ZYNQ
+#ifndef ARRIA10
 typedef __int128 int128_t;
 #endif
 
