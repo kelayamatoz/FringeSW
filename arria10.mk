@@ -26,11 +26,11 @@ LDFLAGS=-Wl,--hash-style=both -lstdc++ -pthread -lpthread -lm -static
 all: pre-build-checks Top
 
 pre-build-checks:
-	ifndef JAVA_HOME
-		GUESS=$(shell readlink -f $(shell dirname $(shell readlink -f `which java`))/../../)
-		$(warning JAVA_HOME is not set, guessing to be ${GUESS}!)
-		JAVA_HOME=$(GUESS)
-	endif
+ifndef JAVA_HOME
+GUESS=$(shell readlink -f $(shell dirname $(shell readlink -f `which java`))/../../)
+$(warning JAVA_HOME is not set, guessing to be ${GUESS}!)
+JAVA_HOME=$(GUESS)
+endif
 
 
 Top: $(OBJECTS)
