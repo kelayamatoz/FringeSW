@@ -270,9 +270,13 @@ arria10-hw:
 
 arria10-sw:
 	cp arria10.mk cpp/Makefile
+	sed -i 's/ifndef ZYNQ/ifndef ARRIA10/g' ./cpp/TopHost.cpp
 	make -C cpp -j8
 	# TODO: still need to decide on how to do this packing process
 	# tar -czf $(APPNAME).tar.gz -C ${ZYNQ_V_DIR} accel.bit.bin parClockFreq.sh -C ../cpp Top -C fringeZynq/utils set_perms setClocks.sh run.sh
+
+arria10-sw-clean:
+	cd cpp && make clean
 
 zcu: zcu-hw zcu-sw
 
