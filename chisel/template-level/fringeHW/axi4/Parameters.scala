@@ -73,25 +73,25 @@ case class AXI4MasterPortParameters(
   masters.combinations(2).foreach { case Seq(x,y) => require (!x.id.overlaps(y.id)) }
 }
 
+
 case class AXI4BundleParameters(
-  addrBits: Int,
-  dataBits: Int,
-  idBits:   Int)
+    addrBits:   Int,
+    dataBits:   Int,
+    idBits:     Int, 
+    lenBits:    Int = AXI4Parameters.lenBits,
+    sizeBits:   Int = AXI4Parameters.sizeBits,
+    burstBits:  Int = AXI4Parameters.burstBits,
+    lockBits:   Int = AXI4Parameters.lockBits,
+    cacheBits:  Int = AXI4Parameters.cacheBits,
+    protBits:   Int = AXI4Parameters.protBits,
+    qosBits:    Int = AXI4Parameters.qosBits,
+    respBits:   Int = AXI4Parameters.respBits
+  )
 {
   require (dataBits >= 8)
   require (addrBits >= 1)
   require (idBits >= 1)
   require (isPow2(dataBits))
-
-  // Bring the globals into scope
-  val lenBits   = AXI4Parameters.lenBits
-  val sizeBits  = AXI4Parameters.sizeBits
-  val burstBits = AXI4Parameters.burstBits
-  val lockBits  = AXI4Parameters.lockBits
-  val cacheBits = AXI4Parameters.cacheBits
-  val protBits  = AXI4Parameters.protBits
-  val qosBits   = AXI4Parameters.qosBits
-  val respBits  = AXI4Parameters.respBits
 
   def union(x: AXI4BundleParameters) =
     AXI4BundleParameters(
