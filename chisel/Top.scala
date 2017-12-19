@@ -66,8 +66,10 @@ class Arria10Interface(p: TopParams) extends TopInterface {
   // To fit the sysid interface, we only want to have 7 bits for 0x0000 ~ 0x01ff
   val axiLiteParams = new AXI4BundleParameters(7, p.dataWidth, 1) 
   // TODO: This group of params is for memory
-  val axiParams = new AXI4BundleParameters(p.dataWidth, 512, 6)
-  val S_AVALON = new AvalonSlave(axiLiteParams) // scalars
+  // TODO: set the correct top parameters for this guy...
+  val axiParams = new AXI4BundleParameters(32, 128, 4)
+  val M_AXI = Vec(1, new AXI4Inlined(axiParams)) 
+  // val S_AVALON = new AvalonSlave(axiLiteParams) // scalars
 }
 
 

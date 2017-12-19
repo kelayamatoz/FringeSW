@@ -69,6 +69,66 @@ class AXI4Bundle(params: AXI4BundleParameters) extends AXI4BundleBase(params)
   val r  = Flipped(Irrevocable(new AXI4BundleR (params)))
 }
 
+
+/**
+ * Arria10 AXI4 interface definition for f2sdram0 hps sdram controller; same as 'AXI4Inlined'.
+ * This version helps qsys to recognize the interface
+ */
+class AXI4Arria10(params: AXI4BundleParameters) extends AXI4BundleBase(params)
+{
+  // aw
+  val AWID     = Output(UInt((params.idBits).W))
+  val AWADDR   = Output(UInt((params.addrBits).W))
+  val AWLEN    = Output(UInt((params.lenBits).W))  // number of beats - 1
+  val AWSIZE   = Output(UInt((params.sizeBits).W)) // bytes in beat = 2^size
+  val AWBURST  = Output(UInt((params.burstBits).W))
+  val AWLOCK   = Output(UInt((params.lockBits).W))
+  val AWCACHE  = Output(UInt((params.cacheBits).W))
+  val AWPROT   = Output(UInt((params.protBits).W))
+  val AWVALID  = Output(Bool())
+  val AWREADY  = Input(Bool())
+  val AWUSER   = Output(UInt((params.addrBits).W))
+  // val AWQOS    = Output(UInt((params.qosBits).W))  // 0=no QoS, bigger = higher priority
+
+  // w
+  val WDATA = Output(UInt((params.dataBits).W))
+  val WSTRB = Output(UInt((params.dataBits/8).W))
+  val WLAST = Output(Bool())
+  val WVALID  = Output(Bool())
+  val WREADY  = Input(Bool())
+
+  // b: Input
+  val BID   = Input(UInt((params.idBits).W))
+  val BRESP = Input(UInt((params.respBits).W))
+  // val BUSER = Input(UInt((params.addrBits).W))
+  val BVALID  = Input(Bool())
+  val BREADY  = Output(Bool())
+
+  // ar
+  val ARID     = Output(UInt((params.idBits).W))
+  val ARADDR   = Output(UInt((params.addrBits).W))
+  val ARLEN    = Output(UInt((params.lenBits).W))  // number of beats - 1
+  val ARSIZE   = Output(UInt((params.sizeBits).W)) // bytes in beat = 2^size
+  val ARBURST  = Output(UInt((params.burstBits).W))
+  val ARLOCK   = Output(UInt((params.lockBits).W))
+  val ARCACHE  = Output(UInt((params.cacheBits).W))
+  val ARPROT   = Output(UInt((params.protBits).W))
+  val ARVALID  = Output(Bool())
+  val ARREADY  = Input(Bool())
+  val ARUSER   = Output(UInt((params.addrBits).W))
+  // val ARQOS    = Output(UInt((params.qosBits).W))  // 0=no QoS, bigger = higher priority
+
+  // r: Input
+  val RID   = Input(UInt((params.idBits).W))
+  val RDATA = Input(UInt((params.dataBits).W))
+  val RRESP = Input(UInt((params.respBits).W))
+  val RLAST = Input(Bool())
+  val RVALID  = Input(Bool())
+  val RREADY  = Output(Bool())
+  // val RUSER = Input(UInt((params.addrBits).W))
+}
+
+
 /**
  * Inlined AXI4 interface definition, same as 'AXI4Bundle'. Inlining helps Vivado
  * to auto-detect AXI4 and hence enables using block connection automation features
