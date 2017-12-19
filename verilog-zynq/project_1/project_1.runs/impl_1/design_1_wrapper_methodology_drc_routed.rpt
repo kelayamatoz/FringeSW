@@ -1,0 +1,370 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
+| Date         : Mon Dec 18 19:06:36 2017
+| Host         : tucson running 64-bit Ubuntu 14.04.5 LTS
+| Command      : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -rpx design_1_wrapper_methodology_drc_routed.rpx
+| Design       : design_1_wrapper
+| Device       : xc7z045ffg900-2
+| Speed File   : -2
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: checkpoint_design_1_wrapper
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 66
++---------+----------+---------------------------------------------+------------+
+| Rule    | Severity | Description                                 | Violations |
++---------+----------+---------------------------------------------+------------+
+| SYNTH-6 | Warning  | Timing of a block RAM might be sub-optimal  | 62         |
+| XDCB-5  | Warning  | Runtime inefficient way to find pin objects | 4          |
++---------+----------+---------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+SYNTH-6#1 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/commandFifo/FIFOCore_1/mems_0/SRAMVerilogAWS/mem_reg_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#2 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_0/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#3 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_1/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#4 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_10/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#5 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_11/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#6 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_12/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#7 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_13/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#8 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_14/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#9 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_15/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#10 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_2/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#11 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_3/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#12 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_4/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#13 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_5/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#14 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_6/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#15 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_7/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#16 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_8/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#17 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_9/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#18 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_1/wdataFifo/WidthConverterFIFO/FIFOCore/mems_1/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#19 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_1/wdataFifo/WidthConverterFIFO/FIFOCore/mems_10/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#20 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_1/wdataFifo/WidthConverterFIFO/FIFOCore/mems_11/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#21 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_1/wdataFifo/WidthConverterFIFO/FIFOCore/mems_12/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#22 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_1/wdataFifo/WidthConverterFIFO/FIFOCore/mems_13/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#23 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_1/wdataFifo/WidthConverterFIFO/FIFOCore/mems_14/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#24 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_1/wdataFifo/WidthConverterFIFO/FIFOCore/mems_15/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#25 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_1/wdataFifo/WidthConverterFIFO/FIFOCore/mems_2/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#26 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_1/wdataFifo/WidthConverterFIFO/FIFOCore/mems_3/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#27 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_1/wdataFifo/WidthConverterFIFO/FIFOCore/mems_4/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#28 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_1/wdataFifo/WidthConverterFIFO/FIFOCore/mems_5/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#29 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_1/wdataFifo/WidthConverterFIFO/FIFOCore/mems_6/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#30 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_1/wdataFifo/WidthConverterFIFO/FIFOCore/mems_7/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#31 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_1/wdataFifo/WidthConverterFIFO/FIFOCore/mems_8/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#32 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_1/wdataFifo/WidthConverterFIFO/FIFOCore/mems_9/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#33 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_2/wdataFifo/WidthConverterFIFO/FIFOCore/mems_1/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#34 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_2/wdataFifo/WidthConverterFIFO/FIFOCore/mems_10/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#35 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_2/wdataFifo/WidthConverterFIFO/FIFOCore/mems_11/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#36 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_2/wdataFifo/WidthConverterFIFO/FIFOCore/mems_12/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#37 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_2/wdataFifo/WidthConverterFIFO/FIFOCore/mems_13/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#38 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_2/wdataFifo/WidthConverterFIFO/FIFOCore/mems_14/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#39 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_2/wdataFifo/WidthConverterFIFO/FIFOCore/mems_15/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#40 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_2/wdataFifo/WidthConverterFIFO/FIFOCore/mems_2/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#41 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_2/wdataFifo/WidthConverterFIFO/FIFOCore/mems_3/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#42 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_2/wdataFifo/WidthConverterFIFO/FIFOCore/mems_4/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#43 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_2/wdataFifo/WidthConverterFIFO/FIFOCore/mems_5/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#44 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_2/wdataFifo/WidthConverterFIFO/FIFOCore/mems_6/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#45 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_2/wdataFifo/WidthConverterFIFO/FIFOCore/mems_7/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#46 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_2/wdataFifo/WidthConverterFIFO/FIFOCore/mems_8/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#47 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_2/wdataFifo/WidthConverterFIFO/FIFOCore/mems_9/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#48 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_3/wdataFifo/WidthConverterFIFO/FIFOCore/mems_1/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#49 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_3/wdataFifo/WidthConverterFIFO/FIFOCore/mems_10/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#50 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_3/wdataFifo/WidthConverterFIFO/FIFOCore/mems_11/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#51 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_3/wdataFifo/WidthConverterFIFO/FIFOCore/mems_12/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#52 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_3/wdataFifo/WidthConverterFIFO/FIFOCore/mems_13/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#53 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_3/wdataFifo/WidthConverterFIFO/FIFOCore/mems_14/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#54 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_3/wdataFifo/WidthConverterFIFO/FIFOCore/mems_15/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#55 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_3/wdataFifo/WidthConverterFIFO/FIFOCore/mems_2/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#56 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_3/wdataFifo/WidthConverterFIFO/FIFOCore/mems_3/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#57 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_3/wdataFifo/WidthConverterFIFO/FIFOCore/mems_4/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#58 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_3/wdataFifo/WidthConverterFIFO/FIFOCore/mems_5/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#59 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_3/wdataFifo/WidthConverterFIFO/FIFOCore/mems_6/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#60 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_3/wdataFifo/WidthConverterFIFO/FIFOCore/mems_7/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#61 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_3/wdataFifo/WidthConverterFIFO/FIFOCore/mems_8/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#62 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance design_1_i/Top_0/FringeZynq/fringeCommon/mags_3/wdataFifo/WidthConverterFIFO/FIFOCore/mems_9/SRAMVerilogAWS/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+XDCB-5#1 Warning
+Runtime inefficient way to find pin objects  
+The option '-to : [get_pins -hierarchical -filter {NAME =~ */inst_fifo_gen/*rstblk*/*PRE}]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '13' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: /home/tianzhao/quartus_16_fringe_ref/spatial-lang-arria10/gen/DRAMWriteTest/verilog-zynq/project_1/project_1.srcs/sources_1/ip/design_1_axi_clock_converter_1_0/design_1_axi_clock_converter_1_0_clocks.xdc (Line: 18)
+Related violations: <none>
+
+XDCB-5#2 Warning
+Runtime inefficient way to find pin objects  
+The option '-to : [get_pins -hierarchical -filter {NAME =~ */inst_fifo_gen/*rstblk*/*PRE}]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '19' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: /home/tianzhao/quartus_16_fringe_ref/spatial-lang-arria10/gen/DRAMWriteTest/verilog-zynq/project_1/project_1.srcs/sources_1/ip/design_1_axi_clock_converter_2_0/design_1_axi_clock_converter_2_0_clocks.xdc (Line: 18)
+Related violations: <none>
+
+XDCB-5#3 Warning
+Runtime inefficient way to find pin objects  
+The option '-to : [get_pins -hierarchical -filter {NAME =~ */inst_fifo_gen/*rstblk*/*PRE}]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '25' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: /home/tianzhao/quartus_16_fringe_ref/spatial-lang-arria10/gen/DRAMWriteTest/verilog-zynq/project_1/project_1.srcs/sources_1/ip/design_1_axi_clock_converter_3_0/design_1_axi_clock_converter_3_0_clocks.xdc (Line: 18)
+Related violations: <none>
+
+XDCB-5#4 Warning
+Runtime inefficient way to find pin objects  
+The option '-to : [get_pins -hierarchical -filter {NAME =~ */inst_fifo_gen/*rstblk*/*PRE}]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '7' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: /home/tianzhao/quartus_16_fringe_ref/spatial-lang-arria10/gen/DRAMWriteTest/verilog-zynq/project_1/project_1.srcs/sources_1/ip/design_1_axi_clock_converter_0_0/design_1_axi_clock_converter_0_0_clocks.xdc (Line: 18)
+Related violations: <none>
+
+

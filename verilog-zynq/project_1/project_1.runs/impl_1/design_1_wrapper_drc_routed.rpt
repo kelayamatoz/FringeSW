@@ -1,0 +1,148 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
+| Date         : Mon Dec 18 19:06:26 2017
+| Host         : tucson running 64-bit Ubuntu 14.04.5 LTS
+| Command      : report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
+| Design       : design_1_wrapper
+| Device       : xc7z045ffg900-2
+| Speed File   : -2
+| Design State : Routed
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: checkpoint_design_1_wrapper
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 22
++-----------+----------+----------------------------+------------+
+| Rule      | Severity | Description                | Violations |
++-----------+----------+----------------------------+------------+
+| CHECK-3   | Warning  | Report rule limit reached  | 1          |
+| REQP-1840 | Warning  | RAMB18 async control check | 20         |
+| RTSTAT-10 | Warning  | No routable loads          | 1          |
++-----------+----------+----------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+CHECK-3#1 Warning
+Report rule limit reached  
+REQP-1840 rule limit reached: 20 violations have been found.
+Related violations: <none>
+
+REQP-1840#1 Warning
+RAMB18 async control check  
+The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_0/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_0/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_0/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_122) which is driven by a register (design_1_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#2 Warning
+RAMB18 async control check  
+The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_0/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_0/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_0/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_122) which is driven by a register (design_1_i/axi_dwidth_converter_0/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#3 Warning
+RAMB18 async control check  
+The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_0/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_0/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_0/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_122) which is driven by a register (design_1_i/axi_protocol_converter_0/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#4 Warning
+RAMB18 async control check  
+The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_1/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_1/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_1/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_46) which is driven by a register (design_1_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#5 Warning
+RAMB18 async control check  
+The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_1/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_1/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_1/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_46) which is driven by a register (design_1_i/axi_dwidth_converter_0/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#6 Warning
+RAMB18 async control check  
+The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_1/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_1/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_1/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_46) which is driven by a register (design_1_i/axi_protocol_converter_0/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#7 Warning
+RAMB18 async control check  
+The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_10/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_10/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_10/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_47) which is driven by a register (design_1_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#8 Warning
+RAMB18 async control check  
+The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_10/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_10/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_10/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_47) which is driven by a register (design_1_i/axi_dwidth_converter_0/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#9 Warning
+RAMB18 async control check  
+The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_10/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_10/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_10/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_47) which is driven by a register (design_1_i/axi_protocol_converter_0/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#10 Warning
+RAMB18 async control check  
+The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_11/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_11/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_11/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_48) which is driven by a register (design_1_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#11 Warning
+RAMB18 async control check  
+The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_11/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_11/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_11/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_48) which is driven by a register (design_1_i/axi_dwidth_converter_0/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#12 Warning
+RAMB18 async control check  
+The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_11/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_11/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_11/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_48) which is driven by a register (design_1_i/axi_protocol_converter_0/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#13 Warning
+RAMB18 async control check  
+The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_12/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_12/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_12/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_49) which is driven by a register (design_1_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#14 Warning
+RAMB18 async control check  
+The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_12/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_12/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_12/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_49) which is driven by a register (design_1_i/axi_dwidth_converter_0/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#15 Warning
+RAMB18 async control check  
+The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_12/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_12/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_12/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_49) which is driven by a register (design_1_i/axi_protocol_converter_0/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#16 Warning
+RAMB18 async control check  
+The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_13/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_13/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_13/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_50) which is driven by a register (design_1_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#17 Warning
+RAMB18 async control check  
+The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_13/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_13/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_13/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_50) which is driven by a register (design_1_i/axi_dwidth_converter_0/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#18 Warning
+RAMB18 async control check  
+The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_13/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_13/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_13/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_50) which is driven by a register (design_1_i/axi_protocol_converter_0/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#19 Warning
+RAMB18 async control check  
+The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_14/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_14/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_14/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_51) which is driven by a register (design_1_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#20 Warning
+RAMB18 async control check  
+The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_14/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_14/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_14/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_51) which is driven by a register (design_1_i/axi_dwidth_converter_0/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+RTSTAT-10#1 Warning
+No routable loads  
+248 net(s) have no routable loads. The problem bus(es) and/or net(s) are design_1_i/axi_protocol_converter_1/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_protocol_converter_2/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_clock_converter_1/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_protocol_converter_2/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_clock_converter_1/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_dwidth_converter_0/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_dwidth_converter_3/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_clock_converter_1/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_protocol_converter_1/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_clock_converter_3/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_dwidth_converter_3/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_clock_converter_2/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_clock_converter_3/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_dwidth_converter_2/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_clock_converter_2/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i (the first 15 of 248 listed).
+Related violations: <none>
+
+

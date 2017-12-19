@@ -1,0 +1,578 @@
+
+*** Running vivado
+    with args -log design_1_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
+
+
+****** Vivado v2017.1 (64-bit)
+  **** SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+  **** IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source design_1_wrapper.tcl -notrace
+Command: open_checkpoint /home/tianzhao/quartus_16_fringe_ref/spatial-lang-arria10/gen/DRAMWriteTest/verilog-zynq/project_1/project_1.runs/impl_1/design_1_wrapper.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1076.207 ; gain = 0.000 ; free physical = 35618 ; free virtual = 209180
+INFO: [Netlist 29-17] Analyzing 1050 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.1
+INFO: [Device 21-403] Loading part xc7z045ffg900-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/tianzhao/quartus_16_fringe_ref/spatial-lang-arria10/gen/DRAMWriteTest/verilog-zynq/project_1/project_1.runs/impl_1/.Xil/Vivado-10202-tucson/dcp3/design_1_wrapper_board.xdc]
+Finished Parsing XDC File [/home/tianzhao/quartus_16_fringe_ref/spatial-lang-arria10/gen/DRAMWriteTest/verilog-zynq/project_1/project_1.runs/impl_1/.Xil/Vivado-10202-tucson/dcp3/design_1_wrapper_board.xdc]
+Parsing XDC File [/home/tianzhao/quartus_16_fringe_ref/spatial-lang-arria10/gen/DRAMWriteTest/verilog-zynq/project_1/project_1.runs/impl_1/.Xil/Vivado-10202-tucson/dcp3/design_1_wrapper_early.xdc]
+Finished Parsing XDC File [/home/tianzhao/quartus_16_fringe_ref/spatial-lang-arria10/gen/DRAMWriteTest/verilog-zynq/project_1/project_1.runs/impl_1/.Xil/Vivado-10202-tucson/dcp3/design_1_wrapper_early.xdc]
+Parsing XDC File [/home/tianzhao/quartus_16_fringe_ref/spatial-lang-arria10/gen/DRAMWriteTest/verilog-zynq/project_1/project_1.runs/impl_1/.Xil/Vivado-10202-tucson/dcp3/design_1_wrapper_late.xdc]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/tianzhao/quartus_16_fringe_ref/spatial-lang-arria10/gen/DRAMWriteTest/verilog-zynq/project_1/project_1.srcs/sources_1/ip/design_1_axi_clock_converter_0_0/design_1_axi_clock_converter_0_0_clocks.xdc:20]
+all_fanout: Time (s): cpu = 00:00:13 ; elapsed = 00:00:11 . Memory (MB): peak = 2153.863 ; gain = 557.578 ; free physical = 34027 ; free virtual = 207606
+Finished Parsing XDC File [/home/tianzhao/quartus_16_fringe_ref/spatial-lang-arria10/gen/DRAMWriteTest/verilog-zynq/project_1/project_1.runs/impl_1/.Xil/Vivado-10202-tucson/dcp3/design_1_wrapper_late.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.14 . Memory (MB): peak = 2186.863 ; gain = 0.000 ; free physical = 33981 ; free virtual = 207560
+Restored from archive | CPU: 0.150000 secs | Memory: 0.010239 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.14 . Memory (MB): peak = 2186.863 ; gain = 0.000 ; free physical = 33981 ; free virtual = 207560
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 279 instances were transformed.
+  RAM32M => RAM32M (RAMS32, RAMS32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32): 275 instances
+  RAM32X1D => RAM32X1D (RAMD32, RAMD32): 4 instances
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2017.1 (64-bit) build 1846317
+open_checkpoint: Time (s): cpu = 00:00:27 ; elapsed = 00:00:26 . Memory (MB): peak = 2186.863 ; gain = 1110.660 ; free physical = 34034 ; free virtual = 207597
+INFO: [Vivado_Tcl 4-424] Cannot write hardware definition file as there are no IPI block design hardware handoff files present
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z045-ffg900'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z045-ffg900'
+INFO: [Common 17-1223] The version limit for your license is '2017.10' and will expire in -48 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+Command: report_drc (run_mandatory_drcs) for: opt_checks
+INFO: [DRC 23-27] Running DRC with 8 threads
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.84 . Memory (MB): peak = 2208.902 ; gain = 19.035 ; free physical = 33955 ; free virtual = 207517
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 16b115c62
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2208.902 ; gain = 0.000 ; free physical = 34061 ; free virtual = 207624
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 982 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 44 inverter(s) to 220 load pin(s).
+Phase 2 Constant propagation | Checksum: 1ce71f796
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 2208.902 ; gain = 0.000 ; free physical = 34046 ; free virtual = 207608
+INFO: [Opt 31-389] Phase Constant propagation created 1425 cells and removed 3909 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 1f8fa1497
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 2208.902 ; gain = 0.000 ; free physical = 33984 ; free virtual = 207546
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 9876 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 1f8fa1497
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 2208.902 ; gain = 0.000 ; free physical = 33951 ; free virtual = 207513
+INFO: [Opt 31-389] Phase BUFG optimization created 0 cells and removed 0 cells
+
+Phase 5 Shift Register Optimization
+Phase 5 Shift Register Optimization | Checksum: 1f8fa1497
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 2208.902 ; gain = 0.000 ; free physical = 33945 ; free virtual = 207507
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2208.902 ; gain = 0.000 ; free physical = 33932 ; free virtual = 207494
+Ending Logic Optimization Task | Checksum: 1f8fa1497
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:14 . Memory (MB): peak = 2208.902 ; gain = 0.000 ; free physical = 33910 ; free virtual = 207473
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 62 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 0 newly gated: 122 Total Ports: 124
+Ending PowerOpt Patch Enables Task | Checksum: 25089d160
+
+Time (s): cpu = 00:00:00.25 ; elapsed = 00:00:00.26 . Memory (MB): peak = 2563.188 ; gain = 0.000 ; free physical = 33559 ; free virtual = 207121
+Ending Power Optimization Task | Checksum: 25089d160
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:10 . Memory (MB): peak = 2563.188 ; gain = 354.285 ; free physical = 33582 ; free virtual = 207144
+28 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:26 . Memory (MB): peak = 2563.188 ; gain = 375.320 ; free physical = 33582 ; free virtual = 207145
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2563.188 ; gain = 0.000 ; free physical = 33581 ; free virtual = 207146
+INFO: [Common 17-1381] The checkpoint '/home/tianzhao/quartus_16_fringe_ref/spatial-lang-arria10/gen/DRAMWriteTest/verilog-zynq/project_1/project_1.runs/impl_1/design_1_wrapper_opt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 2563.195 ; gain = 0.008 ; free physical = 32902 ; free virtual = 206472
+Command: report_drc -file design_1_wrapper_drc_opted.rpt
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/tianzhao/quartus_16_fringe_ref/spatial-lang-arria10/gen/DRAMWriteTest/verilog-zynq/project_1/project_1.runs/impl_1/design_1_wrapper_drc_opted.rpt.
+report_drc completed successfully
+INFO: [Chipscope 16-241] No debug cores found in the current design.
+Before running the implement_debug_core command, either use the Set Up Debug wizard (GUI mode)
+or use the create_debug_core and connect_debug_core Tcl commands to insert debug cores into the design.
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z045-ffg900'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z045-ffg900'
+INFO: [Common 17-1223] The version limit for your license is '2017.10' and will expire in -48 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+Command: report_drc (run_mandatory_drcs) for: incr_eco_checks
+INFO: [DRC 23-27] Running DRC with 8 threads
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+Command: report_drc (run_mandatory_drcs) for: placer_checks
+INFO: [DRC 23-27] Running DRC with 8 threads
+WARNING: [DRC CHECK-3] Report rule limit reached: REQP-1840 rule limit reached: 20 violations have been found.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_0/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_0/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_0/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_122) which is driven by a register (design_1_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_0/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_0/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_0/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_122) which is driven by a register (design_1_i/axi_dwidth_converter_0/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_0/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_0/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_0/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_122) which is driven by a register (design_1_i/axi_protocol_converter_0/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_1/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_1/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_1/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_46) which is driven by a register (design_1_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_1/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_1/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_1/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_46) which is driven by a register (design_1_i/axi_dwidth_converter_0/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_1/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_1/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_1/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_46) which is driven by a register (design_1_i/axi_protocol_converter_0/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_10/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_10/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_10/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_47) which is driven by a register (design_1_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_10/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_10/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_10/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_47) which is driven by a register (design_1_i/axi_dwidth_converter_0/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_10/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_10/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_10/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_47) which is driven by a register (design_1_i/axi_protocol_converter_0/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_11/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_11/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_11/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_48) which is driven by a register (design_1_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_11/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_11/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_11/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_48) which is driven by a register (design_1_i/axi_dwidth_converter_0/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_11/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_11/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_11/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_48) which is driven by a register (design_1_i/axi_protocol_converter_0/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_12/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_12/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_12/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_49) which is driven by a register (design_1_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_12/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_12/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_12/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_49) which is driven by a register (design_1_i/axi_dwidth_converter_0/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_12/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_12/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_12/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_49) which is driven by a register (design_1_i/axi_protocol_converter_0/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_13/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_13/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_13/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_50) which is driven by a register (design_1_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_13/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_13/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_13/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_50) which is driven by a register (design_1_i/axi_dwidth_converter_0/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_13/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_13/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_13/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_50) which is driven by a register (design_1_i/axi_protocol_converter_0/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_14/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_14/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_14/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_51) which is driven by a register (design_1_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_14/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_14/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_14/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_51) which is driven by a register (design_1_i/axi_dwidth_converter_0/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 21 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.18 . Memory (MB): peak = 2563.195 ; gain = 0.000 ; free physical = 32425 ; free virtual = 205996
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 16930c007
+
+Time (s): cpu = 00:00:00.20 ; elapsed = 00:00:00.21 . Memory (MB): peak = 2563.195 ; gain = 0.000 ; free physical = 32425 ; free virtual = 205996
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2563.195 ; gain = 0.000 ; free physical = 32447 ; free virtual = 206018
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 88b9e6d6
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 2563.195 ; gain = 0.000 ; free physical = 32290 ; free virtual = 205860
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 14c7ba8f9
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:16 . Memory (MB): peak = 2563.195 ; gain = 0.000 ; free physical = 32218 ; free virtual = 205789
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 14c7ba8f9
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:16 . Memory (MB): peak = 2563.195 ; gain = 0.000 ; free physical = 32218 ; free virtual = 205789
+Phase 1 Placer Initialization | Checksum: 14c7ba8f9
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:16 . Memory (MB): peak = 2563.195 ; gain = 0.000 ; free physical = 32218 ; free virtual = 205789
+
+Phase 2 Global Placement
+Phase 2 Global Placement | Checksum: 20e134533
+
+Time (s): cpu = 00:01:30 ; elapsed = 00:00:44 . Memory (MB): peak = 2577.215 ; gain = 14.020 ; free physical = 32156 ; free virtual = 205726
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 20e134533
+
+Time (s): cpu = 00:01:30 ; elapsed = 00:00:44 . Memory (MB): peak = 2577.215 ; gain = 14.020 ; free physical = 32158 ; free virtual = 205729
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 13566845b
+
+Time (s): cpu = 00:01:46 ; elapsed = 00:00:51 . Memory (MB): peak = 2577.215 ; gain = 14.020 ; free physical = 32156 ; free virtual = 205727
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 1da4c31f3
+
+Time (s): cpu = 00:01:46 ; elapsed = 00:00:52 . Memory (MB): peak = 2577.215 ; gain = 14.020 ; free physical = 32155 ; free virtual = 205726
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 129d2a90f
+
+Time (s): cpu = 00:01:46 ; elapsed = 00:00:52 . Memory (MB): peak = 2577.215 ; gain = 14.020 ; free physical = 32155 ; free virtual = 205726
+
+Phase 3.5 Timing Path Optimizer
+Phase 3.5 Timing Path Optimizer | Checksum: 1d2773314
+
+Time (s): cpu = 00:01:51 ; elapsed = 00:00:54 . Memory (MB): peak = 2577.215 ; gain = 14.020 ; free physical = 32153 ; free virtual = 205724
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: 8c4d6248
+
+Time (s): cpu = 00:02:03 ; elapsed = 00:01:05 . Memory (MB): peak = 2577.215 ; gain = 14.020 ; free physical = 32130 ; free virtual = 205701
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 98879c9c
+
+Time (s): cpu = 00:02:04 ; elapsed = 00:01:06 . Memory (MB): peak = 2577.215 ; gain = 14.020 ; free physical = 32132 ; free virtual = 205703
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 98879c9c
+
+Time (s): cpu = 00:02:04 ; elapsed = 00:01:06 . Memory (MB): peak = 2577.215 ; gain = 14.020 ; free physical = 32132 ; free virtual = 205703
+Phase 3 Detail Placement | Checksum: 98879c9c
+
+Time (s): cpu = 00:02:04 ; elapsed = 00:01:06 . Memory (MB): peak = 2577.215 ; gain = 14.020 ; free physical = 32132 ; free virtual = 205703
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: cc3175ce
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
+INFO: [Place 46-38] Processed net design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_15/_T_16_reg[0]_0, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-41] BUFG insertion identified 1 candidate nets, 0 success, 1 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason.
+Phase 4.1.1.1 BUFG Insertion | Checksum: cc3175ce
+
+Time (s): cpu = 00:02:21 ; elapsed = 00:01:12 . Memory (MB): peak = 2577.219 ; gain = 14.023 ; free physical = 32127 ; free virtual = 205698
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.583. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 7f9c1fda
+
+Time (s): cpu = 00:02:21 ; elapsed = 00:01:12 . Memory (MB): peak = 2577.219 ; gain = 14.023 ; free physical = 32127 ; free virtual = 205698
+Phase 4.1 Post Commit Optimization | Checksum: 7f9c1fda
+
+Time (s): cpu = 00:02:22 ; elapsed = 00:01:12 . Memory (MB): peak = 2577.219 ; gain = 14.023 ; free physical = 32127 ; free virtual = 205698
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 7f9c1fda
+
+Time (s): cpu = 00:02:22 ; elapsed = 00:01:13 . Memory (MB): peak = 2577.219 ; gain = 14.023 ; free physical = 32135 ; free virtual = 205706
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 7f9c1fda
+
+Time (s): cpu = 00:02:22 ; elapsed = 00:01:13 . Memory (MB): peak = 2577.219 ; gain = 14.023 ; free physical = 32136 ; free virtual = 205707
+
+Phase 4.4 Final Placement Cleanup
+Phase 4.4 Final Placement Cleanup | Checksum: c2a3cf72
+
+Time (s): cpu = 00:02:22 ; elapsed = 00:01:13 . Memory (MB): peak = 2577.219 ; gain = 14.023 ; free physical = 32136 ; free virtual = 205707
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: c2a3cf72
+
+Time (s): cpu = 00:02:23 ; elapsed = 00:01:13 . Memory (MB): peak = 2577.219 ; gain = 14.023 ; free physical = 32136 ; free virtual = 205707
+Ending Placer Task | Checksum: 9b456d54
+
+Time (s): cpu = 00:02:23 ; elapsed = 00:01:13 . Memory (MB): peak = 2577.219 ; gain = 14.023 ; free physical = 32203 ; free virtual = 205774
+49 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:02:28 ; elapsed = 00:01:19 . Memory (MB): peak = 2577.219 ; gain = 14.023 ; free physical = 32203 ; free virtual = 205774
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 2577.219 ; gain = 0.000 ; free physical = 32150 ; free virtual = 205762
+INFO: [Common 17-1381] The checkpoint '/home/tianzhao/quartus_16_fringe_ref/spatial-lang-arria10/gen/DRAMWriteTest/verilog-zynq/project_1/project_1.runs/impl_1/design_1_wrapper_placed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 2577.223 ; gain = 0.004 ; free physical = 32188 ; free virtual = 205770
+report_io: Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.27 . Memory (MB): peak = 2577.223 ; gain = 0.000 ; free physical = 32170 ; free virtual = 205752
+report_utilization: Time (s): cpu = 00:00:00.36 ; elapsed = 00:00:00.41 . Memory (MB): peak = 2577.223 ; gain = 0.000 ; free physical = 32187 ; free virtual = 205770
+report_control_sets: Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.31 . Memory (MB): peak = 2577.223 ; gain = 0.000 ; free physical = 32183 ; free virtual = 205765
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z045-ffg900'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z045-ffg900'
+INFO: [Common 17-1223] The version limit for your license is '2017.10' and will expire in -48 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+Running DRC as a precondition to command route_design
+Command: report_drc (run_mandatory_drcs) for: router_checks
+INFO: [DRC 23-27] Running DRC with 8 threads
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
+Checksum: PlaceDB: c4e4fee ConstDB: 0 ShapeSum: 8ef71d66 RouteDB: 0
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: 12878b1c2
+
+Time (s): cpu = 00:01:12 ; elapsed = 00:00:54 . Memory (MB): peak = 2634.285 ; gain = 57.062 ; free physical = 31930 ; free virtual = 205513
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 12878b1c2
+
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:55 . Memory (MB): peak = 2634.289 ; gain = 57.066 ; free physical = 31949 ; free virtual = 205532
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 12878b1c2
+
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:55 . Memory (MB): peak = 2656.285 ; gain = 79.062 ; free physical = 31904 ; free virtual = 205487
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 12878b1c2
+
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:55 . Memory (MB): peak = 2656.285 ; gain = 79.062 ; free physical = 31904 ; free virtual = 205487
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 11501cf61
+
+Time (s): cpu = 00:01:35 ; elapsed = 00:01:03 . Memory (MB): peak = 2721.816 ; gain = 144.594 ; free physical = 31885 ; free virtual = 205468
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.562  | TNS=0.000  | WHS=-0.307 | THS=-2657.886|
+
+Phase 2 Router Initialization | Checksum: d25ee0ad
+
+Time (s): cpu = 00:01:44 ; elapsed = 00:01:06 . Memory (MB): peak = 2721.816 ; gain = 144.594 ; free physical = 31879 ; free virtual = 205462
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 228532d82
+
+Time (s): cpu = 00:02:00 ; elapsed = 00:01:10 . Memory (MB): peak = 2741.809 ; gain = 164.586 ; free physical = 31858 ; free virtual = 205441
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 1374
+ Number of Nodes with overlaps = 33
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.588  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 1120ab018
+
+Time (s): cpu = 00:02:25 ; elapsed = 00:01:16 . Memory (MB): peak = 2741.809 ; gain = 164.586 ; free physical = 31865 ; free virtual = 205448
+Phase 4 Rip-up And Reroute | Checksum: 1120ab018
+
+Time (s): cpu = 00:02:25 ; elapsed = 00:01:16 . Memory (MB): peak = 2741.809 ; gain = 164.586 ; free physical = 31865 ; free virtual = 205448
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+Phase 5.1 Delay CleanUp | Checksum: 1120ab018
+
+Time (s): cpu = 00:02:26 ; elapsed = 00:01:17 . Memory (MB): peak = 2741.809 ; gain = 164.586 ; free physical = 31865 ; free virtual = 205448
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 1120ab018
+
+Time (s): cpu = 00:02:26 ; elapsed = 00:01:17 . Memory (MB): peak = 2741.809 ; gain = 164.586 ; free physical = 31865 ; free virtual = 205448
+Phase 5 Delay and Skew Optimization | Checksum: 1120ab018
+
+Time (s): cpu = 00:02:26 ; elapsed = 00:01:17 . Memory (MB): peak = 2741.809 ; gain = 164.586 ; free physical = 31865 ; free virtual = 205448
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 14555052f
+
+Time (s): cpu = 00:02:30 ; elapsed = 00:01:18 . Memory (MB): peak = 2741.809 ; gain = 164.586 ; free physical = 31868 ; free virtual = 205451
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.660  | TNS=0.000  | WHS=0.051  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 191a537dd
+
+Time (s): cpu = 00:02:30 ; elapsed = 00:01:18 . Memory (MB): peak = 2741.809 ; gain = 164.586 ; free physical = 31868 ; free virtual = 205451
+Phase 6 Post Hold Fix | Checksum: 191a537dd
+
+Time (s): cpu = 00:02:30 ; elapsed = 00:01:18 . Memory (MB): peak = 2741.809 ; gain = 164.586 ; free physical = 31868 ; free virtual = 205451
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 1.23445 %
+  Global Horizontal Routing Utilization  = 1.73174 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 15766c4f1
+
+Time (s): cpu = 00:02:31 ; elapsed = 00:01:18 . Memory (MB): peak = 2741.809 ; gain = 164.586 ; free physical = 31866 ; free virtual = 205449
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 15766c4f1
+
+Time (s): cpu = 00:02:31 ; elapsed = 00:01:18 . Memory (MB): peak = 2741.809 ; gain = 164.586 ; free physical = 31866 ; free virtual = 205449
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 193b50950
+
+Time (s): cpu = 00:02:33 ; elapsed = 00:01:21 . Memory (MB): peak = 2741.809 ; gain = 164.586 ; free physical = 31866 ; free virtual = 205449
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.660  | TNS=0.000  | WHS=0.051  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: 193b50950
+
+Time (s): cpu = 00:02:33 ; elapsed = 00:01:21 . Memory (MB): peak = 2741.809 ; gain = 164.586 ; free physical = 31869 ; free virtual = 205452
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:02:33 ; elapsed = 00:01:21 . Memory (MB): peak = 2741.809 ; gain = 164.586 ; free physical = 31933 ; free virtual = 205516
+
+Routing Is Done.
+62 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:02:40 ; elapsed = 00:01:25 . Memory (MB): peak = 2741.809 ; gain = 164.586 ; free physical = 31933 ; free virtual = 205516
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 2741.809 ; gain = 0.000 ; free physical = 31869 ; free virtual = 205503
+INFO: [Common 17-1381] The checkpoint '/home/tianzhao/quartus_16_fringe_ref/spatial-lang-arria10/gen/DRAMWriteTest/verilog-zynq/project_1/project_1.runs/impl_1/design_1_wrapper_routed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 2741.816 ; gain = 0.008 ; free physical = 31914 ; free virtual = 205511
+Command: report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/tianzhao/quartus_16_fringe_ref/spatial-lang-arria10/gen/DRAMWriteTest/verilog-zynq/project_1/project_1.runs/impl_1/design_1_wrapper_drc_routed.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:13 ; elapsed = 00:00:05 . Memory (MB): peak = 2743.812 ; gain = 1.996 ; free physical = 31890 ; free virtual = 205486
+Command: report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -rpx design_1_wrapper_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 8 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file /home/tianzhao/quartus_16_fringe_ref/spatial-lang-arria10/gen/DRAMWriteTest/verilog-zynq/project_1/project_1.runs/impl_1/design_1_wrapper_methodology_drc_routed.rpt.
+report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:00:46 ; elapsed = 00:00:10 . Memory (MB): peak = 2800.816 ; gain = 57.004 ; free physical = 31729 ; free virtual = 205326
+Command: report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+69 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:15 ; elapsed = 00:00:06 . Memory (MB): peak = 2884.898 ; gain = 84.082 ; free physical = 31687 ; free virtual = 205296
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Common 17-206] Exiting Vivado at Mon Dec 18 19:06:47 2017...
+
+*** Running vivado
+    with args -log design_1_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
+
+
+****** Vivado v2017.1 (64-bit)
+  **** SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+  **** IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source design_1_wrapper.tcl -notrace
+Command: open_checkpoint design_1_wrapper_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1076.199 ; gain = 0.000 ; free physical = 33260 ; free virtual = 206870
+INFO: [Netlist 29-17] Analyzing 990 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.1
+INFO: [Device 21-403] Loading part xc7z045ffg900-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/tianzhao/quartus_16_fringe_ref/spatial-lang-arria10/gen/DRAMWriteTest/verilog-zynq/project_1/project_1.runs/impl_1/.Xil/Vivado-14120-tucson/dcp3/design_1_wrapper_board.xdc]
+Finished Parsing XDC File [/home/tianzhao/quartus_16_fringe_ref/spatial-lang-arria10/gen/DRAMWriteTest/verilog-zynq/project_1/project_1.runs/impl_1/.Xil/Vivado-14120-tucson/dcp3/design_1_wrapper_board.xdc]
+Parsing XDC File [/home/tianzhao/quartus_16_fringe_ref/spatial-lang-arria10/gen/DRAMWriteTest/verilog-zynq/project_1/project_1.runs/impl_1/.Xil/Vivado-14120-tucson/dcp3/design_1_wrapper_early.xdc]
+Finished Parsing XDC File [/home/tianzhao/quartus_16_fringe_ref/spatial-lang-arria10/gen/DRAMWriteTest/verilog-zynq/project_1/project_1.runs/impl_1/.Xil/Vivado-14120-tucson/dcp3/design_1_wrapper_early.xdc]
+Parsing XDC File [/home/tianzhao/quartus_16_fringe_ref/spatial-lang-arria10/gen/DRAMWriteTest/verilog-zynq/project_1/project_1.runs/impl_1/.Xil/Vivado-14120-tucson/dcp3/design_1_wrapper_late.xdc]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/tianzhao/quartus_16_fringe_ref/spatial-lang-arria10/gen/DRAMWriteTest/verilog-zynq/project_1/project_1.srcs/sources_1/ip/design_1_axi_clock_converter_0_0/design_1_axi_clock_converter_0_0_clocks.xdc:20]
+all_fanout: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 2123.855 ; gain = 542.578 ; free physical = 32249 ; free virtual = 205917
+Finished Parsing XDC File [/home/tianzhao/quartus_16_fringe_ref/spatial-lang-arria10/gen/DRAMWriteTest/verilog-zynq/project_1/project_1.runs/impl_1/.Xil/Vivado-14120-tucson/dcp3/design_1_wrapper_late.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2186.926 ; gain = 34.070 ; free physical = 32190 ; free virtual = 205858
+Restored from archive | CPU: 2.260000 secs | Memory: 34.402420 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2186.926 ; gain = 34.070 ; free physical = 32190 ; free virtual = 205858
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 234 instances were transformed.
+  RAM32M => RAM32M (RAMS32, RAMS32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32): 230 instances
+  RAM32X1D => RAM32X1D (RAMD32, RAMD32): 4 instances
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2017.1 (64-bit) build 1846317
+open_checkpoint: Time (s): cpu = 00:00:29 ; elapsed = 00:00:28 . Memory (MB): peak = 2186.926 ; gain = 1110.730 ; free physical = 32249 ; free virtual = 205860
+Command: write_bitstream -force design_1_wrapper.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z045-ffg900'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z045-ffg900'
+INFO: [Common 17-1223] The version limit for your license is '2017.10' and will expire in -48 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+Running DRC as a precondition to command write_bitstream
+Command: report_drc (run_mandatory_drcs) for: bitstream_checks
+INFO: [DRC 23-27] Running DRC with 8 threads
+WARNING: [DRC CHECK-3] Report rule limit reached: REQP-1840 rule limit reached: 20 violations have been found.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_0/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_0/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_0/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_122) which is driven by a register (design_1_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_0/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_0/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_0/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_122) which is driven by a register (design_1_i/axi_dwidth_converter_0/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_0/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_0/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_0/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_122) which is driven by a register (design_1_i/axi_protocol_converter_0/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_1/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_1/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_1/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_46) which is driven by a register (design_1_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_1/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_1/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_1/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_46) which is driven by a register (design_1_i/axi_dwidth_converter_0/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_1/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_1/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_1/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_46) which is driven by a register (design_1_i/axi_protocol_converter_0/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_10/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_10/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_10/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_47) which is driven by a register (design_1_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_10/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_10/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_10/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_47) which is driven by a register (design_1_i/axi_dwidth_converter_0/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_10/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_10/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_10/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_47) which is driven by a register (design_1_i/axi_protocol_converter_0/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_11/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_11/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_11/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_48) which is driven by a register (design_1_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_11/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_11/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_11/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_48) which is driven by a register (design_1_i/axi_dwidth_converter_0/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_11/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_11/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_11/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_48) which is driven by a register (design_1_i/axi_protocol_converter_0/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_12/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_12/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_12/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_49) which is driven by a register (design_1_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_12/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_12/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_12/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_49) which is driven by a register (design_1_i/axi_dwidth_converter_0/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_12/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_12/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_12/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_49) which is driven by a register (design_1_i/axi_protocol_converter_0/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_13/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_13/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_13/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_50) which is driven by a register (design_1_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_13/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_13/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_13/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_50) which is driven by a register (design_1_i/axi_dwidth_converter_0/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_13/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_13/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_13/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_50) which is driven by a register (design_1_i/axi_protocol_converter_0/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_14/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_14/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_14/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_51) which is driven by a register (design_1_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_14/SRAMVerilogAWS/mem_reg has an input control pin design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_14/SRAMVerilogAWS/mem_reg/ENARDEN (net: design_1_i/Top_0/FringeZynq/fringeCommon/mags_0/wdataFifo/WidthConverterFIFO/FIFOCore/mems_14/SRAMVerilogAWS/mem_reg_ENARDEN_cooolgate_en_sig_51) which is driven by a register (design_1_i/axi_dwidth_converter_0/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC RTSTAT-10] No routable loads: 248 net(s) have no routable loads. The problem bus(es) and/or net(s) are design_1_i/axi_protocol_converter_1/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_protocol_converter_2/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_clock_converter_1/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_protocol_converter_2/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_clock_converter_1/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_dwidth_converter_0/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_dwidth_converter_3/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_clock_converter_1/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_protocol_converter_1/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_clock_converter_3/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_dwidth_converter_3/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_clock_converter_2/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_clock_converter_3/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_dwidth_converter_2/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_clock_converter_2/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i... and (the first 15 of 248 listed).
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 22 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Project 1-821] Please set project.enableDesignId to be 'true'.
+INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./design_1_wrapper.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-118] WebTalk data collection is enabled (User setting is ON. Install Setting is ON.).
+INFO: [Common 17-186] '/home/tianzhao/quartus_16_fringe_ref/spatial-lang-arria10/gen/DRAMWriteTest/verilog-zynq/project_1/project_1.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Mon Dec 18 19:07:49 2017. For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/Vivado/2017.1/doc/webtalk_introduction.html.
+18 Infos, 22 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:46 ; elapsed = 00:00:23 . Memory (MB): peak = 2784.000 ; gain = 597.074 ; free physical = 32143 ; free virtual = 205766
+INFO: [Vivado_Tcl 4-395] Unable to parse hwdef file design_1_wrapper.hwdef
+INFO: [Common 17-206] Exiting Vivado at Mon Dec 18 19:07:50 2017...

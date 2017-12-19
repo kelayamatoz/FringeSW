@@ -1,0 +1,6 @@
+the_ROM_image:
+{
+  [bootloader]fsbl.elf
+  /home/tianzhao/quartus_16_fringe_ref/spatial-lang-arria10/gen/DRAMWriteTest/verilog-zynq/accel.bit
+  u-boot.elf
+}
