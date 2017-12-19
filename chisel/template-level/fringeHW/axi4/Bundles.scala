@@ -74,7 +74,7 @@ class AXI4Bundle(params: AXI4BundleParameters) extends AXI4BundleBase(params)
  * Arria10 AXI4 interface definition for f2sdram0 hps sdram controller; same as 'AXI4Inlined'.
  * This version helps qsys to recognize the interface
  */
-class AXI4Arria10(params: AXI4BundleParameters) extends AXI4BundleBase(params)
+class AXI4Arria10(params: AXI4Arria10BundleParameters) extends AXI4BundleBase(params)
 {
   // aw
   val AWID     = Output(UInt((params.idBits).W))

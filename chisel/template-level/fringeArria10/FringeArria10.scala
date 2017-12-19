@@ -24,7 +24,7 @@ class FringeArria10 (
   val streamOutsInfo: List[StreamParInfo],
   val blockingDRAMIssue: Boolean,
   val axiLiteParams: AXI4BundleParameters,
-  val axiParams: AXI4BundleParameters
+  val axiParams: AXI4Arria10BundleParameters 
 ) extends Module {
   val numRegs = numArgIns + numArgOuts + numArgIOs + 2  // (command, status registers)
   // val addrWidth = log2Up(numRegs)
@@ -44,7 +44,7 @@ class FringeArria10 (
     val S_AVALON = new AvalonSlave(axiLiteParams)
 
     // DRAM interface
-    val M_AXI = Vec(numChannels, new AXI4Inlined(axiParams))
+    val M_AXI = Vec(1, new AXI4Arria10(axiParams))
 
     // Accel Control IO
     val enable = Output(Bool())
