@@ -74,24 +74,52 @@ case class AXI4MasterPortParameters(
 }
 
 
+case class AXI4Arria10BundleParameters (
+  addrBits: Int, 
+  dataBits: Int, 
+  idBits: Int) {
+    require (dataBits >= 8)
+    require (addrBits >= 1)
+    require (idBits >= 1)
+    require (isPow2(dataBits))
+
+    // Bring the globals into scope
+    val lenBits   = AXI4Arria10Parameters.lenBits
+    val sizeBits  = AXI4Arria10Parameters.sizeBits
+    val burstBits = AXI4Arria10Parameters.burstBits
+    val lockBits  = AXI4Arria10Parameters.lockBits
+    val cacheBits = AXI4Arria10Parameters.cacheBits
+    val protBits  = AXI4Arria10Parameters.protBits
+    val qosBits   = AXI4Arria10Parameters.qosBits
+    val respBits  = AXI4Arria10Parameters.respBits
+
+    def union(x: AXI4Arria10BundleParameters) =
+      AXI4Arria10BundleParameters(
+        max(addrBits, x.addrBits),
+        max(dataBits, x.dataBits),
+        max(idBits,   x.idBits))
+}
+
+
 case class AXI4BundleParameters(
-    addrBits:   Int,
-    dataBits:   Int,
-    idBits:     Int, 
-    lenBits:    Int = AXI4Parameters.lenBits,
-    sizeBits:   Int = AXI4Parameters.sizeBits,
-    burstBits:  Int = AXI4Parameters.burstBits,
-    lockBits:   Int = AXI4Parameters.lockBits,
-    cacheBits:  Int = AXI4Parameters.cacheBits,
-    protBits:   Int = AXI4Parameters.protBits,
-    qosBits:    Int = AXI4Parameters.qosBits,
-    respBits:   Int = AXI4Parameters.respBits
-  )
+  addrBits: Int,
+  dataBits: Int,
+  idBits:   Int)
 {
   require (dataBits >= 8)
   require (addrBits >= 1)
   require (idBits >= 1)
   require (isPow2(dataBits))
+
+  // Bring the globals into scope
+  val lenBits   = AXI4Parameters.lenBits
+  val sizeBits  = AXI4Parameters.sizeBits
+  val burstBits = AXI4Parameters.burstBits
+  val lockBits  = AXI4Parameters.lockBits
+  val cacheBits = AXI4Parameters.cacheBits
+  val protBits  = AXI4Parameters.protBits
+  val qosBits   = AXI4Parameters.qosBits
+  val respBits  = AXI4Parameters.respBits
 
   def union(x: AXI4BundleParameters) =
     AXI4BundleParameters(
