@@ -55,11 +55,10 @@ class FringeArria10 (
     val argOuts = Vec(numArgOuts, Flipped(Decoupled((UInt(w.W)))))
 
     // Accel memory IO
-    // val memStreams = new AppStreams(loadStreamInfo, storeStreamInfo)
-    // TODO: need to add memory stream support
+    val memStreams = new AppStreams(loadStreamInfo, storeStreamInfo)
 
     // External enable
-    // val externalEnable = Input(Bool()) // For AWS, enable comes in as input to top module
+    val externalEnable = Input(Bool()) // For AWS, enable comes in as input to top module
 
     // Accel stream IO
 //    val genericStreams = new GenericStreams(streamInsInfo, streamOutsInfo)
@@ -68,10 +67,10 @@ class FringeArria10 (
   // Common Fringe
   val fringeCommon = Module(new Fringe(w, numArgIns, numArgOuts, numArgIOs,
                                         numChannels, numArgInstrs, loadStreamInfo, 
-                                        storeStreamInfo, streamInsInfo, streamOutsInfo, blockingDRAMIssue))
+                                        storeStreamInfo, streamInsInfo, streamOutsInfo, 
+                                        blockingDRAMIssue))
 
-  // AXI-lite bridge
-    // Connect to Avalon Slave
+  // Scalar Interface
   // Avalon is using reset and write_n
   fringeCommon.reset := reset
   fringeCommon.io.raddr := io.S_AVALON.address
@@ -95,4 +94,14 @@ class FringeArria10 (
       fringeArgOut.valid := accelArgOut.valid
     }
   }    
+
+  // Memory Interface
+  io.memStreams <> fringeCommon.io.memStreams
+
+  // AXI bridge
+  io.M_AXI.zipWithIndex.foreach { case (maxi, i) =>
+    val axiBridge = Module(new MAGToAXI4Bridge(axiParams, fringeCommon.mags(i).tagWidth))
+    axiBridge.io.in <> fringeCommon.io.dram(i)
+    maxi <> axiBridge.io.M_AXI
+  }
 }

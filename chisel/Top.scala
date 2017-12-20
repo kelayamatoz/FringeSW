@@ -64,10 +64,11 @@ class ZynqInterface(p: TopParams) extends TopInterface {
 
 class Arria10Interface(p: TopParams) extends TopInterface {
   // To fit the sysid interface, we only want to have 7 bits for 0x0000 ~ 0x01ff
-  val axiLiteParams = new AXI4BundleParameters(7, p.dataWidth, 1) 
-  // TODO: This group of params is for memory
+  val axiLiteParams = new AXI4BundleParameters(7, p.dataWidth, 1)
   val axiParams = new AXI4BundleParameters(p.dataWidth, 512, 6)
-  val S_AVALON = new AvalonSlave(axiLiteParams) // scalars
+
+  val S_AVALON = new AvalonSlave(axiLiteParams)
+  val M_AXI = Vec(p.numChannels, new AXI4Inlined(axiParams))
 }
 
 
@@ -169,6 +170,7 @@ class Top(
   val numChannels = target match {
     case "zynq" | "zcu"     => 4
     case "aws" | "aws-sim"  => 1
+    case "arria10"          => 1
     case _                  => 1
   }
 
@@ -227,10 +229,10 @@ class Top(
     case "arria10" =>
       val blockingDRAMIssue = false
       val topIO = io.asInstanceOf[Arria10Interface]
-      val fringe = Module(new FringeArria10(w, totalArgIns, totalArgOuts, 
-                                            numArgIOs, numChannels, numArgInstrs, 
-                                            totalLoadStreamInfo, totalStoreStreamInfo, 
-                                            streamInsInfo, streamOutsInfo, blockingDRAMIssue, 
+      val fringe = Module(new FringeArria10(w, totalArgIns, totalArgOuts,
+                                            numArgIOs, numChannels, numArgInstrs,
+                                            totalLoadStreamInfo, totalStoreStreamInfo,
+                                            streamInsInfo, streamOutsInfo, blockingDRAMIssue,
                                             topIO.axiLiteParams, topIO.axiParams))
       fringe.io.S_AVALON <> topIO.S_AVALON
 
