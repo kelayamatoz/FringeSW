@@ -269,6 +269,7 @@ arria10-hw:
 	sed -i 's/module Top/module Top_DUT/g' verilog-arria10/Top.v
 	cat ./chisel/template-level/fringeArria10/*.v >> verilog-arria10/Top.v
 	cd verilog-arria10 && mv Top.v Top_DUT.v
+	cp verilog-arria10/Top_DUT.v testbenches/
 
 
 arria10-sw:
