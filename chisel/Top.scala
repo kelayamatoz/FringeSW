@@ -234,9 +234,12 @@ class Top(
                                             totalLoadStreamInfo, totalStoreStreamInfo,
                                             streamInsInfo, streamOutsInfo, blockingDRAMIssue,
                                             topIO.axiLiteParams, topIO.axiParams))
+      // Fringe <-> Host connections
       fringe.io.S_AVALON <> topIO.S_AVALON
 
-      // TODO: add memstream connections here
+      // Fringe <-> DRAM connections
+      topIO.M_AXI <> fringe.io.M_AXI
+
       if (accel.io.argIns.length > 0) {
         accel.io.argIns := fringe.io.argIns
       }
@@ -247,6 +250,10 @@ class Top(
           fringeArgOut.valid := accelArgOut.valid
         }
       }
+
+      // memStream connections
+      fringe.io.externalEnable := false.B
+      fringe.io.memStreams <> accel.io.memStreams
 
       accel.io.enable := fringe.io.enable
       fringe.io.done := accel.io.done

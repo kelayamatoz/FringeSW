@@ -266,7 +266,9 @@ arria10-hw:
 	sbt "run-main top.Instantiator --verilog --testArgs arria10"
 	sed -i 's/SRFF/SRFF_sp/g' verilog-arria10/Top.v
 	sed -i 's/SRAMVerilogSim/SRAMVerilogAWS/g' verilog-arria10/Top.v
+	sed -i 's/module Top/module Top_DUT/g' verilog-arria10/Top.v
 	cat ./chisel/template-level/fringeArria10/*.v >> verilog-arria10/Top.v
+	cd verilog-arria10 && mv Top.v Top_DUT.v
 
 
 arria10-sw:
